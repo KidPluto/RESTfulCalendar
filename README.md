@@ -12,7 +12,8 @@ private int id;
 private String name;
 private String email;
 }
-
+````
+````code
 @Entity
 public class Meeting {
 @Id
@@ -23,7 +24,8 @@ private String description;
 @OneToMany
 private Set<Person> attendees;
 }
-
+````
+````code
 @Entity
 public class Calendar {
 @Id
@@ -37,16 +39,12 @@ private Set<Person> sharedWith;
 }
 ````
 The backend systems include (do not implement these):
-
-SchedulerEngine - Creates a list of times when a set of people are free to attend a meeting on a given day.
-
-CalenderSyncJob - Syncronizes calendar entries with another calendar system. Does not export attendees, only meetings for each calendar month.
+* SchedulerEngine - Creates a list of times when a set of people are free to attend a meeting on a given day.
+* CalenderSyncJob - Syncronizes calendar entries with another calendar system. Does not export attendees, only meetings for each calendar month.
 
 The frontend UIs include (do not implement these):
-
-MonthlyCalendarApp - Shows the user a monthly calendar which shows all meetings for the month. A user can click on a meeting to see the attendees or reschedule.
-
-SchedularApp - Allows a user to schedule a meeting including selecting attendees for the meeting.
+* MonthlyCalendarApp - Shows the user a monthly calendar which shows all meetings for the month. A user can click on a meeting to see the attendees or reschedule.
+* SchedularApp - Allows a user to schedule a meeting including selecting attendees for the meeting.
 
 Please create one or more service interfaces providing an API with enough functionality to meet the needs of these systems and UIs. Limit duplication of functionality as much as possible, but consider scalability in doing so.
 
@@ -55,8 +53,6 @@ Describe how your API solves each of the use cases for the backend systems and U
 Suggestions of additional functionality are welcome.
 
 # Test cases
-
-Test cases
 
 * View calendar
   * Shows meetings
@@ -77,15 +73,18 @@ Test cases
 
 # Notes
 
-Each instance? of Calendar represents 
+Calendar represents 
 * One month
 * One or more meetings
 * Shared with one or more people
 * The calendar is by group or company, not per person.  
 
 SchedulerEngine – backend system
-* Input: Meeting date, set of attendees
-* Output: List of times when set of attendies are available
+* Input: 
+  * Meeting start and end dates
+  * List/set of attendees
+* Output: 
+  * List of times when set of attendees are available
 
 CalendarSyncJob – backend system
 * Input: Month X for Calendar1, Month Y Calendar2
@@ -111,4 +110,7 @@ Assumptions
 See UserService.java
 
 
-
+## Interfaces / services
+* /calendar/calendar#
+* /meeting-detail/meeting#
+* /
