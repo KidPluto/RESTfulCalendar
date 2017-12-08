@@ -58,21 +58,22 @@ Suggestions of additional functionality are welcome.
 
 Test cases
 
-1. View calendar
-2. View meeting
-* Time
-* Attendies
-3. Schedule a meeting
-* Select people to attend meeting
-* Select meeting time
-4. Reschedule a meeting
-* Move or cancel original
-* Update meeting time
-* Update attendies
-5. Select people to attend meeting
-6. Select time for meeting
-7. Sync calendars
-* Export meetings for calendar
+* View calendar
+  * Shows meetings
+* View meeting
+  * Shows time
+  * Shows attendees
+* Schedule a meeting
+  * Select meeting time
+  * Select people
+  * Review times when people are available
+  * Create meeting
+* Reschedule a meeting
+  * Update meeting time
+  * Update attendees
+  * Create meeting
+* Sync calendars
+  * Export meetings for calendar
 
 # Notes
 
