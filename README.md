@@ -121,8 +121,4 @@ https://docs.oracle.com/javaee/6/tutorial/doc/gilik.html
 
 ## API
 
-* GET /calendar/{calendar#}
-* GET /meeting-detail/{meeting#}
-* GET /meeting
-* PUT /meeting
-* DELETE /meeting/{meeting#}
+
