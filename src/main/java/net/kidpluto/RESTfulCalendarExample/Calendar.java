@@ -25,13 +25,9 @@ public interface Calendar {
     @GET
     @Path("/schedule/meeting")
     @Produces(MediaType.APPLICATION_XML)
-    Response scheduleMeeting();
-
-//    @DefaultValue("2") @QueryParam("step") int step,
-//    @DefaultValue("true") @QueryParam("min-m") boolean hasMin,
-//    @DefaultValue("true") @QueryParam("max-m") boolean hasMax,
-//    @DefaultValue("true") @QueryParam("last-m") boolean hasLast,
-//    @DefaultValue("blue") @QueryParam("min-color") ColorParam minColor,
+    Response scheduleMeeting(
+            @QueryParam("attendees") Set attendees
+    );
 
     @POST
     @Path("/create/meeting")

@@ -52,7 +52,7 @@ Describe how your API solves each of the use cases for the backend systems and U
 
 Suggestions of additional functionality are welcome.
 
-# Test cases
+# Use cases
 
 * View calendar - tests MonthlyCalendarApp
   * Shows meetings
