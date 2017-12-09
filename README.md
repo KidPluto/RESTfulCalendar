@@ -60,10 +60,11 @@ Suggestions of additional functionality are welcome.
   * Shows start and end times
   * Shows attendees
 * Schedule a meeting - tests SchedularApp and SchedulerEngine
-  * Add description
-  * Review times when people are available
-  * Select meeting start and end times
+  * Select date
   * Select people
+  * Retrieve when people are available
+  * Select meeting start and end times
+  * Add description
   * Create meeting
 * Reschedule a meeting - tests SchedularApp and SchedulerEngine
   * Review / update start and end times

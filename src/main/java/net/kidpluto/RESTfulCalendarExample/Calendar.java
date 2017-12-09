@@ -27,6 +27,12 @@ public interface Calendar {
     @Produces(MediaType.APPLICATION_XML)
     Response scheduleMeeting();
 
+//    @DefaultValue("2") @QueryParam("step") int step,
+//    @DefaultValue("true") @QueryParam("min-m") boolean hasMin,
+//    @DefaultValue("true") @QueryParam("max-m") boolean hasMax,
+//    @DefaultValue("true") @QueryParam("last-m") boolean hasLast,
+//    @DefaultValue("blue") @QueryParam("min-color") ColorParam minColor,
+
     @POST
     @Path("/create/meeting")
     @Produces(MediaType.APPLICATION_XML)
