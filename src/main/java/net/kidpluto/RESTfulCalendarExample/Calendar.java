@@ -2,9 +2,9 @@ package net.kidpluto.RESTfulCalendarExample;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.*;
-import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Context;
 import java.io.IOException;
 import java.util.Date;
 import java.util.Set;
@@ -37,13 +37,25 @@ public interface Calendar {
                          @FormParam("attendees") Set attendees,
                          @Context HttpServletResponse servletResponse) throws IOException;
 
-    @DELETE
-    @Path("/meeting/{meetingid}")
+    @PUT
+    @Path("/update/meeting")
     @Produces(MediaType.APPLICATION_XML)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    Response deleteMeeting(@PathParam("meetingid") int id);
+    String updateMeeting(@FormParam("meetingid") int id,
+                         @FormParam("start") Date start,
+                         @FormParam("finish") Date finish,
+                         @FormParam("description") String description,
+                         @FormParam("attendees") Set attendees,
+                         @Context HttpServletResponse servletResponse) throws IOException;
 
-    @POST
+
+//    @DELETE
+//    @Path("/meeting/{meetingid}")
+//    @Produces(MediaType.APPLICATION_XML)
+//    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+//    Response deleteMeeting(@PathParam("meetingid") int id);
+
+    @PUT
     @Path("/update/calendars")
     @Produces(MediaType.APPLICATION_XML)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
