@@ -20,10 +20,13 @@ public interface Calendar {
     @Path("/view/meeting/{meetingid}")
     Response viewMeeting(@PathParam("meetingid") int id);
 
+    @GET
+    @Path("/schedule/meeting")
+    Response scheduleMeeting();
+
     @POST
     @Path("/create/meeting")
-    String createMeeting(@FormParam("id") int id,
-                         @FormParam("start") Date start,
+    String createMeeting(@FormParam("start") Date start,
                          @FormParam("finish") Date finish,
                          @FormParam("description") String description,
                          @FormParam("attendees") Set attendees,
