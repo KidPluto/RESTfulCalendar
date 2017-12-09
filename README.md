@@ -92,24 +92,25 @@ SchedulerEngine – backend system
   * List of times when set of attendees are available
 
 CalendarSyncJob – backend system
-* Input: Month X for Calendar1, Month Y Calendar2
-* Output: ?
-* Not sure what this does
+* Input: 
+  * Two calendars
+* Output: 
+  * 
+* Verify calendars are for the same month and year.
+* Copy all meets from each calender, to the other
 
 MonthlyCalendarApp – frontend UI
 * Show one month
 * Show all meetings for that month
-* Select meeting to view attendies
-* Select meeting to reschedule meeting – this calls ScheduleApp?
-* Assumption: create meeting – this calls SchedulerApp
+* Select meeting to view attendees
+* Create meeting invokes SchedulerApp
 
 SchedularApp – frontend UI
 * Create meeting
 * Select attendees
 * Available dates/times shown? - this calls SchedulerEngine?
 
-Assumptions
-
+# Reference
 
 [https://www.tutorialspoint.com/restful/restful_quick_guide.htm]
 See UserService.java, second example
