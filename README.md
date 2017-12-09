@@ -114,6 +114,8 @@ SchedularApp – frontend UI
 
 [https://www.tutorialspoint.com/restful/restful_quick_guide.htm]
 See UserService.java, second example
+https://docs.oracle.com/javaee/6/tutorial/doc/gilik.html
+
 
 
 ## API
