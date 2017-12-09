@@ -10,6 +10,6 @@ public interface GetCalendarInterface {
 
     @GET
     @Path("{calendarid}")
-    Response getCalendar( @PathParam("calendarid") String Id);
+    Response getCalendar( @PathParam("calendarid") int Id);
 }
 
