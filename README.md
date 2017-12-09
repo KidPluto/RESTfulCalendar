@@ -115,6 +115,6 @@ See UserService.java, second example
 
 * GET /calendar/{calendar#}
 * GET /meeting-detail/{meeting#}
-* GET /schedule-meeting
-* POST /create-meeting
-* POST /
+* GET /meeting
+* PUT /meeting
+* DELETE /meeting/{meeting#}
