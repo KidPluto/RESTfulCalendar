@@ -6,12 +6,12 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Response;
 
 @Path("/calendar")
-public class GetCalendar {
+public class GetCalendar implements GetCalendarInterface {
 
     @GET
-    @Path("{param}")
-    public Response getMsg( @PathParam("param") String msg) {
-        String output = "Jersey says : " + msg;
+    @Path("{calendarid}")
+    public Response getCalendar( @PathParam("calendarid") String Id) {
+        String output = "Jersey says, the Calendar Id you have requested is : " + Id;
         return Response.status(200).entity( output).build();
     }
 }

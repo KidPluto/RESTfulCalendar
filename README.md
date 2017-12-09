@@ -107,7 +107,7 @@ Assumptions
 
 
 [https://www.tutorialspoint.com/restful/restful_quick_guide.htm]
-See UserService.java
+See UserService.java, second example
 
 
 ## Interfaces / services
