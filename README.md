@@ -111,7 +111,10 @@ Assumptions
 See UserService.java, second example
 
 
-## Interfaces / services
-* /calendar/calendar#
-* /meeting-detail/meeting#
-* /
+## API
+
+* GET /calendar/{calendar#}
+* GET /meeting-detail/{meeting#}
+* GET /schedule-meeting
+* POST /create-meeting
+* POST /
