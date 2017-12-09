@@ -14,11 +14,11 @@ public interface Calendar {
 
     @GET
     @Path("/view/{calendarid}")
-    Response viewCalendar(@PathParam("calendarid") int Id);
+    Response viewCalendar(@PathParam("calendarid") int id);
 
     @GET
     @Path("/view/meeting/{meetingid}")
-    Response viewMeeting(@PathParam("meetingid") int Id);
+    Response viewMeeting(@PathParam("meetingid") int id);
 
     @POST
     @Path("/create/meeting")
@@ -31,6 +31,11 @@ public interface Calendar {
 
     @DELETE
     @Path("/delete/meeting/{meetingid}")
-    Response deleteMeeting(@PathParam("meetingid") int Id);
+    Response deleteMeeting(@PathParam("meetingid") int id);
 
+    @POST
+    @Path("/update/calendars")
+    String syncCalendars(@FormParam("calenderOneId") int calendarOneId,
+                         @FormParam("calendarTwoId") int calendarTwoId,
+                         @Context HttpServletResponse servletResponse) throws IOException;
 }
