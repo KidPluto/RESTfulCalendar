@@ -54,22 +54,25 @@ Suggestions of additional functionality are welcome.
 
 # Test cases
 
-* View calendar
+* View calendar - tests MonthlyCalendarApp
   * Shows meetings
-* View meeting
+* View meeting - tests MonthlyCalendarApp
   * Shows start and end times
   * Shows attendees
-* Schedule a meeting
+* Schedule a meeting - tests SchedularApp and SchedulerEngine
+  * Add description
   * Review times when people are available
   * Select meeting start and end times
   * Select people
   * Create meeting
-* Reschedule a meeting
+* Reschedule a meeting - tests SchedularApp and SchedulerEngine
   * Review / update start and end times
   * Review / update attendees
-  * Create meeting
-  * Delete original meeting
-* Sync calendars
+  * Review / update description
+  * Update meeting
+    * Creates new meeting
+    * Deletes original meeting
+* Sync calendars - tests CalenderSyncJob
   * Export meetings for calendar
 
 # Notes
