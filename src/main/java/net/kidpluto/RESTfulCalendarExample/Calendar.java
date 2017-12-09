@@ -38,7 +38,7 @@ public interface Calendar {
                          @Context HttpServletResponse servletResponse) throws IOException;
 
     @DELETE
-    @Path("/delete/meeting/{meetingid}")
+    @Path("/meeting/{meetingid}")
     @Produces(MediaType.APPLICATION_XML)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     Response deleteMeeting(@PathParam("meetingid") int id);
