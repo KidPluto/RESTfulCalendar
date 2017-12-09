@@ -22,13 +22,15 @@ public interface Calendar {
 
     @POST
     @Path("/create/meeting")
-    String createMerting(@FormParam("id") int id,
+    String createMeeting(@FormParam("id") int id,
                          @FormParam("start") Date start,
                          @FormParam("finish") Date finish,
                          @FormParam("description") String description,
                          @FormParam("attendees") Set attendees,
                          @Context HttpServletResponse servletResponse) throws IOException;
-}
 
-//    @OneToMany
-//    private Set<Person> attendees;
+    @DELETE
+    @Path("/delete/meeting/{meetingid}")
+    Response deleteMeeting(@PathParam("meetingid") int Id);
+
+}
