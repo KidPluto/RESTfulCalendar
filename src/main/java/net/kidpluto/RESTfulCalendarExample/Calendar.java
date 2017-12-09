@@ -15,20 +15,21 @@ public interface Calendar {
     @GET
     @Path("/view/{calendarid}")
     @Produces(MediaType.APPLICATION_XML)
-    Response viewCalendar(@PathParam("calendarid") int id);
+    Response viewCalendar(
+            @PathParam("calendarid") int id);
 
     @GET
     @Path("/view/meeting/{meetingid}")
     @Produces(MediaType.APPLICATION_XML)
-    Response viewMeeting(@PathParam("meetingid") int id);
+    Response viewMeeting(
+            @PathParam("meetingid") int id);
 
     @GET
-    @Path("/schedule/meeting")
+    @Path("/attendees/{calendarid}")
     @Produces(MediaType.APPLICATION_XML)
-    Response scheduleMeeting(
-            @QueryParam("calendarId") int calendarId,
-            @QueryParam("attendees") Set attendees
-    );
+    Response attendeesAvailability(
+            @PathParam("calendarid") int id,
+            @QueryParam("attendees") Set attendees);
 
     @POST
     @Path("/create/meeting")
