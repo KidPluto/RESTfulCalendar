@@ -26,6 +26,7 @@ public interface Calendar {
     @Path("/schedule/meeting")
     @Produces(MediaType.APPLICATION_XML)
     Response scheduleMeeting(
+            @QueryParam("calendarId") int calendarId,
             @QueryParam("attendees") Set attendees
     );
 
@@ -33,7 +34,8 @@ public interface Calendar {
     @Path("/create/meeting")
     @Produces(MediaType.APPLICATION_XML)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    String createMeeting(@FormParam("start") Date start,
+    String createMeeting(@FormParam("calenderId") int calendarId,
+                         @FormParam("start") Date start,
                          @FormParam("finish") Date finish,
                          @FormParam("description") String description,
                          @FormParam("attendees") Set attendees,
@@ -43,19 +45,13 @@ public interface Calendar {
     @Path("/update/meeting")
     @Produces(MediaType.APPLICATION_XML)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    String updateMeeting(@FormParam("id") int id,
+    String updateMeeting(@FormParam("calenderId") int calendarId,
+                         @FormParam("meetingId") int meetingId,
                          @FormParam("start") Date start,
                          @FormParam("finish") Date finish,
                          @FormParam("description") String description,
                          @FormParam("attendees") Set attendees,
                          @Context HttpServletResponse servletResponse) throws IOException;
-
-
-//    @DELETE
-//    @Path("/meeting/{meetingid}")
-//    @Produces(MediaType.APPLICATION_XML)
-//    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-//    Response deleteMeeting(@PathParam("meetingid") int id);
 
     @PUT
     @Path("/sync/calendars")
