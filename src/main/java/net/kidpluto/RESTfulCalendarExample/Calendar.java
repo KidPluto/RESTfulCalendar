@@ -41,7 +41,7 @@ public interface Calendar {
     @Path("/update/meeting")
     @Produces(MediaType.APPLICATION_XML)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    String updateMeeting(@FormParam("meetingid") int id,
+    String updateMeeting(@FormParam("id") int id,
                          @FormParam("start") Date start,
                          @FormParam("finish") Date finish,
                          @FormParam("description") String description,
@@ -56,7 +56,7 @@ public interface Calendar {
 //    Response deleteMeeting(@PathParam("meetingid") int id);
 
     @PUT
-    @Path("/update/calendars")
+    @Path("/sync/calendars")
     @Produces(MediaType.APPLICATION_XML)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     String syncCalendars(@FormParam("calenderOneId") int calendarOneId,
