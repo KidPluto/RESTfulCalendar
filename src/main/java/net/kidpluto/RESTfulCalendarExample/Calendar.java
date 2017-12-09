@@ -14,18 +14,26 @@ public interface Calendar {
 
     @GET
     @Path("/view/{calendarid}")
+    @Produces(MediaType.APPLICATION_XML)
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     Response viewCalendar(@PathParam("calendarid") int id);
 
     @GET
     @Path("/view/meeting/{meetingid}")
+    @Produces(MediaType.APPLICATION_XML)
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     Response viewMeeting(@PathParam("meetingid") int id);
 
     @GET
     @Path("/schedule/meeting")
+    @Produces(MediaType.APPLICATION_XML)
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     Response scheduleMeeting();
 
     @POST
     @Path("/create/meeting")
+    @Produces(MediaType.APPLICATION_XML)
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     String createMeeting(@FormParam("start") Date start,
                          @FormParam("finish") Date finish,
                          @FormParam("description") String description,
@@ -34,10 +42,14 @@ public interface Calendar {
 
     @DELETE
     @Path("/delete/meeting/{meetingid}")
+    @Produces(MediaType.APPLICATION_XML)
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     Response deleteMeeting(@PathParam("meetingid") int id);
 
     @POST
     @Path("/update/calendars")
+    @Produces(MediaType.APPLICATION_XML)
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     String syncCalendars(@FormParam("calenderOneId") int calendarOneId,
                          @FormParam("calendarTwoId") int calendarTwoId,
                          @Context HttpServletResponse servletResponse) throws IOException;
