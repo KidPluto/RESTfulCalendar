@@ -57,17 +57,18 @@ Suggestions of additional functionality are welcome.
 * View calendar
   * Shows meetings
 * View meeting
-  * Shows time
+  * Shows start and end times
   * Shows attendees
 * Schedule a meeting
-  * Select meeting time
-  * Select people
   * Review times when people are available
+  * Select meeting start and end times
+  * Select people
   * Create meeting
 * Reschedule a meeting
-  * Update meeting time
-  * Update attendees
+  * Review / update start and end times
+  * Review / update attendees
   * Create meeting
+  * Delete original meeting
 * Sync calendars
   * Export meetings for calendar
 
