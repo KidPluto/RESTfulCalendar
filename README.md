@@ -73,7 +73,8 @@ Suggestions of additional functionality are welcome.
     * Creates new meeting
     * Deletes original meeting
 * Sync calendars - tests CalenderSyncJob
-  * Export meetings for calendar
+  * Assumption - the input is two calendars, with the same month/year
+  * All meetings from each calendar are copied to the other calendar
 
 # Notes
 
